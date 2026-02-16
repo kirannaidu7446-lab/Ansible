@@ -3,6 +3,6 @@
   become: yes #take sudo access
   tasks:
   - name: install nginx
-    ansible.builtin.package: #heteregenous module that cn work for all distros 
-     name:nginx
-     state:present 
+    ansible.builtin.package: #heteregenous module that can work for all distros 
+     name: nginx
+     state: present 
