@@ -1,0 +1,6 @@
+-name:ping the server
+  hosts:web
+  tasks:#list of tasks/modules/cpllections
+  -name:ping teh server
+  ansible.builtin.ping:
+  
