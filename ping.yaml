@@ -1,5 +1,20 @@
-- name: ping the server
+- name: play01
   hosts: web
   tasks: #list of tasks/modules/collections
-  - name: ping the server
+  - name: play-01 and task-01
     ansible.builtin.ping:
+     msg: "This is from play-01 task-01"
+
+- name: play02
+  hosts: web
+  tasks: #list of tasks/modules/collections
+  - name: play-02 and task-02
+    ansible.builtin.ping:
+     msg: "This is from play-02 task-02"
+
+- name: play03
+  hosts: web
+  tasks: #list of tasks/modules/collections
+  - name: play-03 and task-03
+    ansible.builtin.ping:
+     msg: "This is from play-03 task-03"
