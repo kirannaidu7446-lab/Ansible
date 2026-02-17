@@ -6,5 +6,5 @@
    Place: "hyderabad"
   tasks:
    -name: print the info 
-     ansible.print.debug:
-      msg:"Hi, iam watching {{movie}}, Duration is : {{Duration}}, fom place :{{place}}"
+     ansible.builtin.debug:
+      msg:"Hi, iam watching {{movie}}, Duration is : {{Duration}}, from place :{{place}}"
