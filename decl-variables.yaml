@@ -5,6 +5,6 @@
     Duration: "120min"
     Place: "hyderabad"
   tasks:
-    -name: print the info 
-      ansible.builtin.debug:
-        msg: "Hi, iam watching {{movie}}, Duration is :{{Duration}}, from place :{{place}}"
+  - name: print the info 
+    ansible.builtin.debug:
+      msg: "Hi, iam watching {{movie}}, Duration is :{{Duration}}, from place :{{place}}"
