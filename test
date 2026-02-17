@@ -1,0 +1,11 @@
+- name: variables to print
+  hosts: web
+  vars:
+    movie: "bring me thanos!!"
+    Duration: "120min"
+    Place: "hyderabad"
+
+  tasks:
+    - name: print the info
+      ansible.builtin.debug:
+        msg: "Hi, I am watching {{ movie }}, Duration is: {{ Duration }}, from place: {{ Place }}"

@@ -7,4 +7,4 @@
   tasks:
   - name: print the info 
     ansible.builtin.debug:
-      msg: "Hi, iam watching {{movie}}, Duration is :{{Duration}}, from place :{{place}}"
+      msg: "Hi, iam watching {{movie}}, Duration is :{{Duration}}, from Place :{{Place}}"
