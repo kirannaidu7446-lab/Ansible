@@ -3,8 +3,8 @@
   become: yes
   tasks:
   - name: check user exist or not 
-     ansible.builtin.command: id expense 
-     register: User #user is a variable that gets o/p from above command 
+    ansible.builtin.command: id expense 
+    register: User #user is a variable that gets o/p from above command 
 
   -name: print the user info 
    ansible.builtin.debug:
