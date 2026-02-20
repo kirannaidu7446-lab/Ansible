@@ -1,6 +1,21 @@
-- name: start an ec2 instance with public ip address
-  amazon.aws.ec2_instance:
-    name: "database"
-    vpc_subnet_id: "subnet-07c9a1c390c7a633b"
-    instance_type: "t3.micro"
-    security_group: "sg-0a54587d2b22a28f2"
+- name: create ec2 instances and route53 records 
+  hosts: local
+  connections: local
+  vars:
+    subnet_id: "subnet-07c9a1c390c7a633b"
+    sg_id: "sg-0a54587d2b22a28f2"
+    ami_id: "ami-0220d79f3f480ecf5"
+    instances:
+    - mysql
+    - backend
+    - frontend
+    - nginx
+  tasks:
+  - name: start an ec2 instance with public ip address
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      vpc_subnet_id: "{{ subnet_id }}"
+      instance_type: "t3.micro"
+      security_group: "{{ sg_id }}"
+    loop: "{{ instances }}"
+    register: ec2_instances
